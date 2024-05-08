@@ -1,59 +1,564 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=IM+Fell+English+SC&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 :root {
     --main-color : hsla(84, 43%, 85%, 0.732);
     --black-color :#1d164b;
     --border:0.1rem solid rgba(255,255,255,0.4);
 }
-
-*{
-    font-family:"Almendra" , sans-serif;
-    margin:0;
+* {
+    font-family: "Almendra", sans-serif;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    border:none;
-    text-decoration:none ;
+    border: none;
+    text-decoration: none;
     text-transform: capitalize;
-    transition: 0.2 ease;
-
-
+    outline: none;
+    transition: 0.2s ease;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: var(--main-color);
-    height:1800vh;
+    height: 1800vh;
 }
 
-
-/* .header .logo img {
-    height :0rem;
-
-  } */
-
-.header{
+.header {
     background-color: rgb(217, 217, 217);
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5%;
-    margin :2rem 5%;
+    margin: 2rem 5%;
     border-radius: 10rem;
     box-shadow: 0px 0px 35px -2px rgba(53, 0, 42, 0.695);
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
-.header .navbar a{
-    margin :6.9rem;
-    font-size:1.6rem;
-    color:var(--black-color);
+
+.header .navbar a {
+    margin: 6.9rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
 }
+
+#hakkimda {
+    background-color: #6c4242; /* Örnek bir renk */
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+
+
+}
+
+#sehrim {
+    background-color: #057b48; /* Örnek bir renk */
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+
+#mirasimiz {
+    background-color: #19848a; /* Örnek bir renk */
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+
+#cv {
+    background-color: #c0c0c0; /* Örnek bir renk */position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+
+#iletisim {
+    background-color: #a31010; /* Örnek bir renk */position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+.curve{
+    position: absolute;
+    height: 225px;
+    width:200%;
+    bottom:0;
+
+}
+ .curve::before{
+ content: '';
+ display: block;
+ position: absolute;
+ border-radius: 100% 50%;
+ width: 100%;
+ height: 100%;
+ background-color: #ebc7c7;
+ transform:translate(150%,10%);
+
+ }
+ .curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #ebc7c7;
+    transform: translate(-100%,100%);
+    z-index: -1;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=IM+Fell+English+SC&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+:root {
+    --main-color : hsla(84, 43%, 85%, 0.732);
+    --black-color :#1d164b;
+    --border:0.1rem solid rgba(255,255,255,0.4);
+}
+* {
+    font-family: "Almendra", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 1800vh;
+}
+
+.header {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    margin: 2rem 5%;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 35px -2px rgba(53, 0, 42, 0.695);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    margin: 6.9rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+#hakkimda {
+    background-color: #6c4242; /* Örnek bir renk */
+    /* position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+
+
+}
+
+#sehrim {
+    background-color: #057b48; /* Örnek bir renk */
+    /* position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+} */
+
+/* #mirasimiz {
+    background-color: #19848a; /* Örnek bir renk */
+    /* position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+} */ 
+
+/* #cv {
+    background-color: #c0c0c0; Örnek bir renkposition: relative;
+    /* display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+} */ 
+/* 
+#iletisim {
+    background-color: #a31010; Örnek bir renkposition: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding:100px 20vw;
+}
+.curve{
+    position: absolute;
+    height: 225px;
+    width:100%;
+    bottom:0;
+
+}
+ .curve::before{
+ content: '';
+ display: block;
+ position: absolute;
+ border-radius: 100% 50%;
+ width: 55%;
+ height: 100%;
+ background-color: #6c4242;
+ transform:translate(85%,60%);
+
+ } */
+ /* .curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #057b48;
+    transform: translate(-4%,40%);
+    z-index: -1;
+ } */ 
+ /* :root {
+    --main-color: hsla(84, 43%, 85%, 0.732);
+    --black-color: #1d164b;
+}
+
+* {
+    font-family: "Almendra", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 500vh;
+}
+
+.header {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    margin: 2rem 5%;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 35px -2px rgba(53, 0, 42, 0.695);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    margin: 6.9rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+#hakkimda,
+#sehrim,
+#mirasimiz,
+#cv,
+#iletisim {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#hakkimda .curve::before,
+#sehrim .curve::before,
+#mirasimiz .curve::before,
+#cv .curve::before,
+#iletisim .curve::before {
+    content: '';
+    display:block;
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 85%;
+    height: 100%;
+    transform: translate(-10%, 20%);
+}
+
+#hakkimda .curve::after,
+#sehrim .curve::after,
+#mirasimiz .curve::after,
+#cv .curve::after,
+#iletisim .curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 85%;
+    height: 100%;
+    transform: translate(-80%, 30%);
+}
+
+#hakkimda .curve::before,
+#hakkimda .curve::after {
+    background-color: #6c4242;
+}
+
+#sehrim .curve::before,
+#sehrim .curve::after {
+    background-color: #057b48;
+}
+
+#mirasimiz .curve::before,
+#mirasimiz .curve::after {
+    background-color: #19848a;
+}
+
+#cv .curve::before,
+#cv .curve::after {
+    background-color: #c0c0c0;
+}
+
+#iletisim .curve::before,
+#iletisim .curve::after {
+    background-color: #a31010;
+} */
+
+/* :root {
+    --main-color: hsla(84, 43%, 85%, 0.732);
+    --black-color: #1d164b;
+}
+
+* {
+    font-family: "Almendra", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 500vh;
+}
+
+.header {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    margin: 2rem 5%;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 35px -2px rgba(53, 0, 42, 0.695);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    margin: 6.9rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+#hakkimda,
+#sehrim,
+#mirasimiz,
+#cv,
+#iletisim {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Her bölümün başlangıcından itibaren 100px boşluk */
+/* }
+
+.curve::before,
+.curve::after {
+    content: '';
+    display:block;
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 85%;
+    height: 100%;
+}
+
+#hakkimda .curve::before,
+#hakkimda .curve::after {
+    transform: translate(-10%, 20%);
+    background-color: #6c4242;
+}
+
+#sehrim .curve::before,
+#sehrim .curve::after {
+    transform: translate(-10%, 20%); /* Gerekirse ayarlayın */
+    /* background-color: #057b48;
+}
+
+#mirasimiz .curve::before,
+#mirasimiz .curve::after {
+    transform: translate(-10%, 20%); /* Gerekirse ayarlayın */
+    /* background-color: #19848a;
+} */
+
+/* #cv .curve::before,
+#cv .curve::after {
+    transform: translate(-10%, 20%); /* Gerekirse ayarlayın */
+    /* background-color: #c0c0c0;
+} */ 
+
+/* #iletisim .curve::before,
+#iletisim .curve::after {
+    transform: translate(-10%, 20%); /* Gerekirse ayarlayın */
+    /* background-color: #a31010;
+}  */
+/* :root {
+    --main-color: hsla(84, 43%, 85%, 0.732);
+    --black-color: #1d164b;
+}
+
+* {
+    font-family: "Almendra", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+    height: 500vh;
+}
+
+.header {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    margin: 2rem 5%;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 35px -2px rgba(53, 0, 42, 0.695);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    margin: 6.9rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > section {
+    margin-top: 100px; /* Her bölümün başlangıcından itibaren 100px boşluk */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.curve::before,
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 85%;
+    height: 100%;
+}
+
+.curve::before {
+    background-color: #6c4242;
+    transform: translate(-10%, 20%);
+}
+
+.curve::after {
+    background-color: #057b48;
+    transform: translate(-80%, 30%);
+} */
