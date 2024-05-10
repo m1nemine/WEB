@@ -16,3 +16,13 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000); // 3 saniyede bir geçiş yap
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const navbar = document.querySelector('.header .navbar');
+
+    menuBtn.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+    });
+});

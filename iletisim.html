@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>WEB TEK</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -10,13 +11,24 @@
 <body>
   <header class="header">    
       <nav class="navbar">
-          <a href = "index.html" class="active">Ana Sayfa/Hakkımda</a>        
+          <a href = "index.html" >Ana Sayfa/Hakkımda</a>        
           <a href = "sehrim.html" >Şehrim</a>          
           <a href = "takim.html" >Takımım</a>
           <a href = "cv.html" >CV</a>
-          <a href = "iletisim.html" >İletişim</a>
+          <a href = "iletisim.html" class="active">İletişim</a>
 
       </nav>
+      <div class="buttons">
+        <button>
+          <i class="fa-brands fa-github"></i>
+        </button>
+        <button>
+          <i class="fa-brands fa-linkedin"></i>
+        </button>
+        <button id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
   </header>
   <div class="iletisim-content">
     <!-- <div class="foto"><img src="images/gorsel4.jpg"></div> -->
