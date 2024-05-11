@@ -20,23 +20,26 @@
       </nav>
       <div class="buttons">
         <button>
-          <i class="fa-brands fa-github"></i>
-        </button>
-        <button>
-          <i class="fa-brands fa-linkedin"></i>
-        </button>
+          <a href="https://github.com/m1nemine" ><i class="fa-brands fa-github"></i></a>
+         </button>
+         <button>
+          <a href="https://www.linkedin.com/in/emine-b%C3%B6l%C3%BCk-6201b2309/"> <i class="fa-brands fa-linkedin"></i></a>
+         </button>
         <button id="menu-btn">
           <i class="fas fa-bars"></i>
         </button>
       </div>
   </header>
-  <div class="iletisim-content">
-    <!-- <div class="foto"><img src="images/gorsel4.jpg"></div> -->
+  <div class="iletisim-content">   
     <div class="baslik"><h1>İletişim</h1></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   
     </p>
-   
+    <form id="contact-form" method="POST" action="iletisim.php">
+      <input type="email" id="email" name="email" placeholder="E-posta" required>
+      <input type="password" id="password" name="password" placeholder="Şifre" required>
+      <button type="submit">Gönder</button>
+  </form>
  </div>
     <script src="scripts/script.js"></script>
 
