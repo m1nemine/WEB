@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Briem+Hand:wght@100..900&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wdth,wght@0,83.1,482;1,83.1,482&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Briem+Hand:wght@100..900&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wdth,wght@0,83.1,482;1,83.1,482&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Briem+Hand:wght@100..900&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wdth,wght@0,83.1,482;1,83.1,482&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Briem+Hand:wght@100..900&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tac+One&family=Ubuntu+Sans:ital,wdth,wght@0,83.1,482;1,83.1,482&display=swap');
 :root {
     --main-color : hsla(84, 43%, 85%, 0.732);
     --black-color :#1d164b;
@@ -33,15 +34,15 @@ body {
 }
 body.sehrim-page {
    
-    background-color: #315f40; /* Şehrim sayfası için arka plan rengi */
+    background-color: #675869f1; 
 }
 body.cv-page {
    
-    background-color: var(--main-color); /* Şehrim sayfası için arka plan rengi */
+    background-color: var(--main-color); 
 }
 body.takim-page {
     
-    background-color: #0c4963; /* Şehrim sayfası için arka plan rengi */
+    background-color: #0c4963; 
 }
 .header {
     background-color: rgb(217, 217, 217);
@@ -64,12 +65,12 @@ body.takim-page {
     transition: color 0.05s ease;
 }
 .buttons button:hover {
-    color: #560404; /* Rengi istediğiniz renkle değiştirebilirsiniz */
-    border-radius: 50px; /* Yuvarlak oval için kenar yarıçapı */
+    color: #560404; 
+    border-radius: 50px; 
     border: 1px solid #6c6c6c;
     padding: 1px 11px;
-    background-color: #c9c4c8; /* Arka plan rengi */
-    color: white; /* Yazı rengi */
+    background-color: #c9c4c8; 
+    color: white;
   }
 #menu-btn{
     display: none;
@@ -82,21 +83,16 @@ body.takim-page {
     color: var(--black-color);
 }
 .navbar a:hover {
-    /* color: #875976; /* Rengi istediğiniz renkle değiştirebilirsiniz */
-    /* border-radius: 50px; /* Yuvarlak oval için kenar yarıçapı */
-    /* border: 3px solid #6c6c6c; */
-    /* padding: 8px 18px; */ 
-    color: #875976; /* Rengi istediğiniz renkle değiştirebilirsiniz */
-    border-radius: 50px; /* Yuvarlak oval için kenar yarıçapı */
+    color: #875976; 
+    border-radius: 50px; 
     border: 3px solid #6c6c6c;
     padding: 8px 18px;
-    background-color: #898688; /* Arka plan rengi */
-    color: white; /* Yazı rengi */
+    background-color: #898688; 
+    color: white; 
   }
-  
-  /* Aktif sayfanın link rengi */
+ 
   .navbar a.active {
-    color: #806074; /* Aktif sayfanın rengini istediğiniz renkle değiştirebilirsiniz */
+    color: #806074; 
   }
 
 @media only screen and (max-width: 1468px) {
@@ -111,28 +107,33 @@ body.takim-page {
     }
 }
 .sehrim-content {
-    font-family: "Abril Fatface", serif;
-    /* font-family: "Almendra", sans-serif; */
-    padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 10px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    margin: 2rem 5%; /* Kenar boşlukları */
-    font-size: 1.6rem; /* Yazı boyutu */
-    color: #000000; /* Yazı rengi */
+    /* font-family: "Abril Fatface", serif; */
+    font-family: "Almendra", sans-serif;
+    padding: 2rem;  
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 5%; 
+    font-size: 1.6rem; 
+    color: #000000; 
+    background-color:#c1a687 ;     
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .sehrim-content .baslik{
-    font-family: "Pacifico", cursive;
+    font-family: "Tac One", sans-serif;
     align-items: center;
     font-size: 50px;
+    color:#e4e2b8f1;
    
 
 }
 
 @media only screen and (max-width: 1098px) {
     .sehrim-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem; 
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .sehrim-content .baslik{
         align-items: center;
@@ -155,35 +156,59 @@ body.takim-page {
     
     }
 }
-.sehrim-content.slider-container {
-    width: 30%;
-    overflow: hidden; /* Slider sınırlarını aşan resimleri gizle */
-    margin-top: 100px; /* Slider ile başlık arasında boşluk */
-}
 
-.slider {
-    display: flex; /* Resimlerin yan yana düzenlenmesini sağlar */
-    transition: transform 0.05s ease; /* Geçiş efekti */
-    margin-left: 40%;
-    padding-left: 40px;
-    /* padding-right: 40px; */
-}
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.slider img {
-    width: 30%; /* Resimlerin genişliğini ayarlar */
-    height: auto; /* Oranları korur */
-    margin-right: 80px;
 }
+.slider{
+    width: 800px;
+    height: 500px;
+    position: relative;
 
-/* Responsive stiller */
+}
+.slider img{
+width: 100%;
+height: 100%;
+border-radius: 7px;
+
+}
+.slider .buton{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+
+}
+ .slider .buton i{
+    color: #000000;
+ }
+
+ .slider .buton  :hover{
+    cursor: pointer;
+    color:#c5bfbf
+ }
+
+
+
 @media screen and (max-width: 768px) {
     .slider img {
-        width: 20%; /* Küçük ekranlarda resimleri orijinal boyutlarında göster */
+        width: 20%; 
     }
 }
 .index-content {
-    /* font-family: "Almendra", sans-serif; */
-    font-family: "Abril Fatface", sans-serif;
+    font-family: "Almendra", sans-serif;
+    /* font-family: "Abril Fatface", sans-serif; */
     padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
     border-radius: 10px; /* Kenar yuvarlatma */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
@@ -195,8 +220,6 @@ body.takim-page {
     font-family: "Almendra", sans-serif;
     align-items: center;
     font-size: 50px;
-   
-
 }
 .index-content .baslik .sola-kaydir{
     float:left;
@@ -220,6 +243,7 @@ padding:10 10px 100px 100;
     color: #000000;
 }
 
+
 @media only screen and (max-width: 1098px) {
     .index-content {
         padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
@@ -228,9 +252,7 @@ padding:10 10px 100px 100;
     }
     .index-content .baslik{
         align-items: center;
-        font-size: 60px;
-       
-    
+        font-size: 60px;    
     }
 }
 
@@ -242,16 +264,14 @@ padding:10 10px 100px 100;
     }
     .index-content .baslik{
         align-items: center;
-        font-size: 40px;
-       
-    
+        font-size: 40px;    
     }
 }
 .cv-content {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 10px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     margin: 2rem 5%; /* Kenar boşlukları */
     font-size: 1.6rem; /* Yazı boyutu */
     color: #333; /* Yazı rengi */
@@ -263,10 +283,6 @@ padding:10 10px 100px 100;
     font-size: 20px;
     margin-bottom: 20px;
 
-}
-.cv-content h4 {
-    display: inline; /* Satır içi olarak göster */
-    margin-right: 20px; /* Sağ boşluk */
 }
 .cv-content p span {
     display: inline-block;
@@ -380,62 +396,40 @@ padding:10 10px 100px 100;
 }
 .takim-content .baslik{
     font-family: "Abril Fatface", serif;
-    text-decoration:underline;
-    /* font-family: "Briem Hand", cursive; */
+    text-decoration:underline;   
     padding-left: 290px;
     align-items: center;
     font-size: 60px;
     color: #083041;
-   
-
 }
-/* .takim-part {
-    display: inline-block;
-    margin: 50px; 
-    padding-left: 30px; 
-}
-
-/* .takim-part img {
-  
-    border-radius: 50%;
-    margin-right: 30px;
-    width: 29%;
-    height:auto;
-    transition: all 0.5s ease;
-} */
 .takim-part {
     display: flex;    
-    /* margin: 50px; */
+    margin: 90px;
     /* padding-left: 30px; */
     width:auto ;
 }
-
-
 .takim-part img {
     
     border-radius: 50%;
     /* margin-right: 10px; */
-    width: 79%;
+    width: 89%;
     /* height:auto; */
     transition: all 0.5s ease;
 }
 .takim-part img:hover {
     transform: scale(1.1); }
-
-
-
 .image-container {
     position: relative;
 }
 
 .image-caption {   
-    font-family: "Abril Fatface", serif;
+    font-family: "Ubuntu Sans", sans-serif;
     position: absolute;
     bottom: 80px; /* Adjust as needed */
     left: 39%;
     transform: translateX(-50%);
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    color: rgb(202, 230, 203);
+    background-color: rgba(245, 239, 239, 0.5);
+    color: rgb(6, 63, 8);
     padding: 5px 10px;
     border-radius: 5px;
     opacity: 0;

@@ -1,31 +1,37 @@
-const slider = document.querySelector('.slider');
-let isTransitioning = false;
+// script.js
+var mainimg=document.querySelector('img')
+var images=['images/gorsel1.jpg','images/gorsel2.jpg','images/gorsel3.jpg','images/gorsel4.jpg']
+var num=0;
+const auto=true;
+const IntervalTime=5000;
+let slideInterval
 
-function nextSlide() {
-  if (!isTransitioning) {
-    isTransitioning = true;
-    slider.style.transition = 'transform 0.5s ease-in-out';
-    slider.style.transform = 'translateX(-100%)';
-    setTimeout(() => {
-      slider.appendChild(slider.firstElementChild);
-      slider.style.transition = 'none';
-      slider.style.transform = 'translateX(10)';
-      isTransitioning = false;
-    }, 500);
+
+function next(){
+  num++
+  if(num>=images.length){
+    num=0;
+    mainimg.src=images[num]
+  }
+  else{
+    mainimg.src=images[num]
   }
 }
 
-setInterval(nextSlide, 5000); // 3 saniyede bir geçiş yap
+function back(){
+  num--
+  if(num<0){
+    num=images.length-1
+    mainimg.src=images[num]
+  }
+  else{
+    mainimg.src=images[num]
+  }
+}
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.querySelector('.menu-btn');
-    const navbar = document.querySelector('.header .navbar');
-
-    menuBtn.addEventListener('click', function () {
-        navbar.classList.toggle('active');
-    });
-});
+if(auto){
+  slideInterval=setInterval(next,IntervalTime)
+}
 
 
 
