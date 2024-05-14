@@ -1,5 +1,5 @@
 // script.js
-var mainimg=document.querySelector('img')
+var mainimg=document.querySelector('#slayt')
 var images=['images/gorsel1.jpg','images/gorsel2.jpg','images/gorsel3.jpg','images/gorsel4.jpg']
 var num=0;
 const auto=true;
@@ -34,5 +34,23 @@ if(auto){
 }
 
 
+$(document).ready(function(){
+  $('#menu-btn').click(function(){
+      $('.header .navbar').toggle();
+  });
+});
 
 
+$(window).on('resize', function() {
+  var win = $(this); // this = window
+  if (win.width() >= 800) {
+      $('#menu-btn').trigger('click');
+  }
+});
+// Trigger resize event immediately
+$(window).on('resize', function() {
+  var win = $(this); // this = window
+  if (win.width() >= 800 && !$('.header .navbar').is(':visible')) {
+      $('#menu-btn').trigger('click');
+  }
+});
