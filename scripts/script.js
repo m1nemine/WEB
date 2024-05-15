@@ -1,6 +1,7 @@
 // script.js
 var mainimg=document.querySelector('#slayt')
 var images=['images/gorsel1.jpg','images/gorsel2.jpg','images/gorsel3.jpg','images/gorsel4.jpg']
+var links = ["index.html", "cv.html", "login.html"];
 var num=0;
 const auto=true;
 const IntervalTime=5000;
@@ -29,6 +30,7 @@ function back(){
   }
 }
 
+
 if(auto){
   slideInterval=setInterval(next,IntervalTime)
 }
@@ -54,3 +56,20 @@ $(window).on('resize', function() {
       $('#menu-btn').trigger('click');
   }
 });
+
+
+
+// function navigateTo(id) {
+//   location.hash = id;
+// }
+// var images = ["gorsel1.jpg", "gorsel2.jpg", "gorsel3.jpg"];
+// var links = ["index.html", "cv.html", "login.html"];
+
+// for (var i = 0; i < images.length; i++) {
+//     var img = document.createElement("img");
+//     img.src = "images/" + images[i];
+    
+//     img.id = "slayt" + (i + 1);
+//     img.onclick = function() { navigateTo(links[i]); };
+//     document.querySelector(".slider").appendChild(img);
+// }
