@@ -65,4 +65,48 @@
 
         </tbody>
 
-    </table>
+    <tbody>
+        <!-- Existing rows... -->
+
+        <tr>
+            <td id="basliklar">Tarih</td>
+            <td id="basliklar">
+                <?php
+                echo $_POST['date'];
+                ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="basliklar">Seçenek</td>
+            <td id="basliklar">
+                <?php
+                echo $_POST['option'];
+                ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="basliklar">Onay Kutusu</td>
+            <td id="basliklar">
+                <?php
+                echo isset($_POST['checkbox']) ? 'Evet' : 'Hayır';
+                ?>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="basliklar">Aralık</td>
+            <td id="basliklar">
+                <?php
+                echo $_POST['range'];
+                ?>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+<?php
+header("refresh:5;url=index.html");
+?>

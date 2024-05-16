@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
   <title>WEB TEK</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -13,7 +14,7 @@
   <body class="sehrim-page"> 
   
   <header class="header">    
-      <nav class="navbar">
+      <nav class="navbar" >
           <a href = "index.html" >Ana Sayfa</a>        
           <a href = "sehrim.html"class="active" >Şehrim</a>          
           <a href = "takim.html" >Takımım</a>
@@ -38,46 +39,106 @@
   <div class="baslik"><h1>İstanbul</h1></div>
   <p>Boğazın iki yakasına yayılmış, tarihi yarımadayı ve modern gökdelenleri kucaklayan İstanbul, adeta bir açık hava müzesidir. Her köşesinde farklı bir hikayenin gizlendiği bu şehirde, her adımda geçmişin ve geleceğin izlerini görebilirsiniz.</p>
 
-   
-  <div class="main">
-    <div class="slider"> 
-      <img src="images/gorsel1.jpg" alt="Resim 1" id="slayt">
-    <div class="buton">  
-      <i class="fa-solid fa-angle-left fa-4x" onclick="next()"></i> 
-      <i class="fa-solid fa-angle-right fa-4x"onclick="back()"></i>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/gorsel2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/gorsel5.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/gorsel7.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/gorsel4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Fourth slide label</h5>
+          <p>Some representative placeholder content for the fourth slide.</p>
+        </div>
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+   
   </div>
+
   
 </div>
 <div class="sehrim-content2">
-  <p> Tarihi ve Kültürel Zenginlik:
+  <p id="resim1"> Tarihi ve Kültürel Zenginlik:
   
     Ayasofya, Topkapı Sarayı ve Sultanahmet Camii gibi tarihi eserler, Bizans ve Osmanlı İmparatorluğu'nun ihtişamını yansıtır.
     Yerebatan Sarnıcı, Kapalıçarşı ve Mısır Çarşısı gibi ikonik yapılar, şehrin kozmopolit geçmişine tanıklık eder.
     Dolmabahçe Sarayı ve Çırağan Sarayı, Osmanlı padişahlarının ihtişamını ve zarafetini gözler önüne serer.
     İstanbul Arkeoloji Müzeleri ve Türk ve İslam Eserleri Müzesi, dünyanın en zengin müze koleksiyonlarından bazılarını barındırır.
-    Doğal Güzellikler:
+    Doğal Güzellikler:</p>
     
-    Boğaz manzarası, şehrin en göz alıcı simgelerinden biridir. Tekne turu yapmak veya sahilde yürüyüş yapmak, şehrin huzurlu atmosferini hissetmenin en güzel yollarıdır.
+   <p id="resim2">Boğaz manzarası, şehrin en göz alıcı simgelerinden biridir. Tekne turu yapmak veya sahilde yürüyüş yapmak, şehrin huzurlu atmosferini hissetmenin en güzel yollarıdır.
     Belgrad Ormanı ve Emirgan Korusu gibi yeşil alanlar, şehrin kalabalığından kaçmak ve doğayla iç içe olmak için idealdir.
     Adalar (Prens Adaları), tarihi Rum evleri, çam ormanları ve sakin atmosferiyle günübirlik kaçamaklar için mükemmel bir seçimdir.
     Lezzet Durakları:
-    
+  </p> 
     Türk mutfağı, dünya çapında ün kazanmış lezzetleri ile her damak tadına hitap eder. Kebap, pide, lahmacun, baklava ve Türk kahvesi gibi klasik lezzetlerin yanı sıra, her semtte keşfedilmeyi bekleyen yöresel tatlar da mevcuttur.
     İstanbul'un sokak lezzetleri, şehrin en keyifli deneyimlerinden biridir. Simit, midye dolma, kokoreç ve tantuni gibi sokak lezzetlerini tatmadan dönmek olmaz.
     Eğlence ve Alışveriş:
-    
+   <p id="resim3">
     Taksim Meydanı ve İstiklal Caddesi, şehrin en canlı ve hareketli bölgeleridir. Alışveriş yapmak, kafede oturmak veya sokak sanatçılarını izlemek için ideal bir yerdir.
     Ortaköy ve Bebek, lüks mağazaları, restoranları ve barlarıyla şehrin en gözde semtlerindendir.
-    Gece hayatı, İstanbul'da oldukça hareketlidir. Her zevke ve bütçeye uygun bar, kulüp ve canlı müzik mekanları mevcuttur.
+    Gece hayatı, İstanbul'da oldukça hareketlidir.</p> 
+   <p id="resim4">  Her zevke ve bütçeye uygun bar, kulüp ve canlı müzik mekanları mevcuttur.
     İstanbul, her mevsim farklı bir güzellik sunan, keşfedilmeyi bekleyen bir hazinedir. Tarihi dokusu, doğal güzellikleri, lezzetli mutfağı ve canlı atmosferi ile unutulmaz bir seyahat deneyimi vadediyor.
 
   </p>
+  
+  
+
+
+
 </div>
-  </div>
+<div class="container">
+
+
+  <!-- Content here -->
+</div>
+  <script src="sehrim.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<style>
+  .navbar a {
+    text-decoration: none; /* Navbar linklerinin altını çizmeyi kaldırır */
+}
+
+</style>
 </body>
 </html>

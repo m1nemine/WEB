@@ -78,7 +78,6 @@ body.takim-page {
 .header .navbar a {
     font-family: "Jaro", sans-serif;
     margin: 6.3rem;
-
     font-size: 1.6rem;
     color: var(--black-color);
 }
@@ -120,6 +119,14 @@ body.takim-page {
     padding-left: 40px;
     padding-right: 40px;
 }
+.sehrim-content .baslik h1{
+    font-family: "Abril Fatface", serif; 
+    align-items: center;
+    font-size: 70px;
+    color:#e4e2b8f1;
+   
+
+}
 .sehrim-content2 {
     
     font-family: "Almendra", sans-serif;
@@ -134,15 +141,7 @@ body.takim-page {
     padding-left: 40px;
     padding-right: 40px;
 }
-.sehrim-content .baslik{
-    font-family: "Abril Fatface", serif;
-    /* font-family: "Tac One", sans-serif; */
-    align-items: center;
-    font-size: 50px;
-    color:#e4e2b8f1;
-   
 
-}
 
 @media only screen and (max-width: 1098px) {
     .sehrim-content {
@@ -164,7 +163,7 @@ body.takim-page {
     }
     .sehrim-content .baslik{
         align-items: center;
-        font-size: 30px;
+        font-size: 50px;
        
     
     }
@@ -501,7 +500,7 @@ padding:10 10px 100px 100;
 .takim-content {
     font-family: "Ubuntu Sans", sans-serif;
     padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 900px; /* Kenar yuvarlatma */
+    border-radius: 500px; /* Kenar yuvarlatma */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
     margin: 2rem 5%; /* Kenar boşlukları */
     font-size: 1.6rem; /* Yazı boyutu */
@@ -516,7 +515,33 @@ padding:10 10px 100px 100;
     margin: 1rem 1%; 
     font-size: 2rem; /* Yazı boyutu */
     color: #333; /* Yazı rengi */
+    background-color:#33d456f1;
+    text-align: justify;
+    padding-left: 120px;
+    padding-right: 100px;
+}
+.takim-content4 {
+    font-family: "Ubuntu Sans", sans-serif;
+    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
+    border-radius: 900px; /* Kenar yuvarlatma */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    margin: 1rem 1%; 
+    font-size: 2rem; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
     background-color:#c7d433f1;
+    text-align: justify;
+    padding-left: 120px;
+    padding-right: 100px;
+}
+.takim-content3 {
+    font-family: "Ubuntu Sans", sans-serif;
+    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
+    border-radius: 900px; /* Kenar yuvarlatma */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    margin: 1rem 1%; 
+    font-size: 2rem; /* Yazı boyutu */
+    color: #d0cdcd; /* Yazı rengi */
+    background-color:#090531f1;
     text-align: justify;
     padding-left: 120px;
     padding-right: 100px;
@@ -732,3 +757,92 @@ padding:10 10px 100px 100;
 .menu-btn {  
     cursor: pointer; /* İmleci bir işaretçiye dönüştürür */
 }
+
+.carousel {
+    width: 50%; /* Carousel'in genişliğini ayarlar */
+    margin: auto; /* Carousel'i sayfanın ortasına hizalar */
+   
+  }
+  .carousel-item img {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px;/* Resimlerin oranını korur */
+  }
+#pizza {
+    text-align: center;
+}
+
+#pizza img {
+    width: 300px;
+    height: 300px;
+}
+
+#pizza h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+
+/* #film {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#film p {
+    font-size: 1.2em;
+    color: #DFD0B8;
+    text-align: center;
+}
+
+#film img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#movie-details {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#movie-details h2 {
+    font-size: 2em;
+    color: #DFD0B8;
+}
+#movie-details p #film img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#movie-details p {
+    font-size: 1.2em;
+    color: #DFD0B8;
+    text-align: center;
+}
+h1  {
+    color: #DFD0B8;
+    text-align: center;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
