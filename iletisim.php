@@ -2,7 +2,7 @@
         <thead class="table">
             <tr>
                 <th colspan="5" id="basliklar">
-                    <h3> GELEN BİLGİLER</h3>
+                    <h3> MESAJINIZ İLETİLDİ!</h3>
                 </th>
             </tr>
         </thead>
@@ -66,7 +66,7 @@
         </tbody>
 
     <tbody>
-        <!-- Existing rows... -->
+       
 
         <tr>
             <td id="basliklar">Tarih</td>
@@ -96,7 +96,7 @@
         </tr>
 
         <tr>
-            <td id="basliklar">Aralık</td>
+            <td id="basliklar">TC kimlik NO:</td>
             <td id="basliklar">
                 <?php
                 echo $_POST['range'];
@@ -109,4 +109,43 @@
 </table>
 <?php
 header("refresh:5;url=index.html");
+?>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $isim = $_POST['isim'];
+    $mail = $_POST['mail'];
+    $radio = $_POST['radio'];
+    $radio2 = $_POST['radio2'];
+    $date = $_POST['date'];
+    $range = $_POST['range'];
+    $option = $_POST['option'];
+    $checkbox = $_POST['checkbox'];
+    $mesaj = $_POST['mesaj'];
+
+    echo "<table border='1'>
+    <tr>
+    <th>İsim</th>
+    <th>Mail</th>
+    <th>Radio</th>
+    <th>Radio2</th>
+    <th>Date</th>
+    <th>Range</th>
+    <th>Option</th>
+    <th>Checkbox</th>
+    <th>Mesaj</th>
+    </tr>
+    <tr>
+    <td>$isim</td>
+    <td>$mail</td>
+    <td>$radio</td>
+    <td>$radio2</td>
+    <td>$date</td>
+    <td>$range</td>
+    <td>$option</td>
+    <td>$checkbox</td>
+    <td>$mesaj</td>
+    </tr>
+    </table>";
+}
 ?>

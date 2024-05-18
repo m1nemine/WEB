@@ -96,13 +96,13 @@ body.takim-page {
 
 @media only screen and (max-width: 1468px) {
     .header .navbar {
-        flex-direction: column; /* Navbar öğelerini dikey olarak düzenleme */
-        align-items: center; /* Öğeleri ortala */
-        text-align: center; /* Yazıları ortala */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
 
     .header .navbar a {
-        margin: 1rem 0; /* Öğeler arasındaki boşluğu artırma */
+        margin: 1rem 0; 
     }
 }
 .sehrim-content {
@@ -122,7 +122,7 @@ body.takim-page {
 .sehrim-content .baslik h1{
     font-family: "Abril Fatface", serif; 
     align-items: center;
-    font-size: 70px;
+    font-size: 78px;
     color:#e4e2b8f1;
    
 
@@ -141,9 +141,22 @@ body.takim-page {
     padding-left: 40px;
     padding-right: 40px;
 }
+.sehrim-content3 {
+    
+    font-family: "Almendra", sans-serif;
+    padding: 2rem;  
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 5%; 
+    font-size: 2.6rem; 
+    color: #000000; 
+    background-color:#c1a687 ;     
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
-
-@media only screen and (max-width: 1098px) {
+/* @media only screen and (max-width: 1098px) {
     .sehrim-content {
         padding: 1.5rem; 
         margin: 1rem 2%; 
@@ -153,21 +166,19 @@ body.takim-page {
         align-items: center;
         font-size: 50px;  
     }
-}
+} */
 
-@media only screen and (max-width: 676px) {
+/* @media only screen and (max-width: 676px) {
     .sehrim-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 1.2rem; /* Yazı boyutunu daha da küçültme */
+        padding: 1rem; 
+        margin: 0.5rem 1%; 
+        font-size: 1.2rem; 
     }
     .sehrim-content .baslik{
         align-items: center;
-        font-size: 50px;
-       
-    
+        font-size: 30px;   
     }
-}
+} */
 
 .main{
     width: 100%;
@@ -178,8 +189,8 @@ body.takim-page {
 
 }
 .slider{
-    width: 800px;
-    height: 500px;
+    width: 500px;
+    height: 800px;
     position: relative;
 
 }
@@ -254,7 +265,10 @@ padding:10 10px 100px 100;
 .index-content .index-metin a{
     color: #000000;
 }
-
+ 
+.ilgi-alani {
+    font-size: 30px;
+}
 
 @media only screen and (max-width: 1098px) {
     .index-content {
@@ -267,8 +281,8 @@ padding:10 10px 100px 100;
         font-size: 40px;    
     }
     .slider{
-        width: 400px;
-        height: 300px;
+        width: 300px;
+        height: 400px;
         position: relative;
     
     }
@@ -276,24 +290,36 @@ padding:10 10px 100px 100;
 
 @media only screen and (max-width: 776px) {
     .index-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 9px; /* Yazı boyutunu daha da küçültme */
+        padding: 1rem; 
+        margin: 0.5rem 1%; 
+        font-size: 9px; 
     }
     .index-content .baslik{
         align-items: center;
         font-size: 25px;    
     }
-    .slider{
-        width: 100%; /* Adjust the width to fit the screen */
+    /* .slider{
+        width: 100%; 
         height: 170px;
-        display: flex; /* Use Flexbox */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */ /* Adjust the height to maintain aspect ratio */
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
     }
+    .slider img {
+        width: 100%; 
+        height: 100%; 
+        border-radius: 7px; 
+    } */
+.slider{
+    width: 200px;
+    height: 300px;
+    position: relative;
+
+}
 .slider img{
-    width: 60%; /* Adjust the width to fit the screen */
-    height: auto;
+    width: 100%; 
+        height: 100%; 
+        border-radius: 7px; 
 }
 }
 
@@ -302,9 +328,9 @@ padding:10 10px 100px 100;
     padding: 2rem; 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    margin: 2rem 5%; /* Kenar boşlukları */
-    font-size: 1.6rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    margin: 2rem 5%;
+    font-size: 1.6rem; 
+    color: #333; 
     padding-left: 100px;
 }
 .cv-content .baslik{
@@ -331,38 +357,38 @@ padding:10 10px 100px 100;
 .cv-content img {
     background-color: transparent;
     border-radius: 50%;
-    width: 300px; /* Görüntü genişliği */
-    height: auto; /* Görüntü yüksekliğinin otomatik ayarlanması */   
+    width: 300px; 
+    height: auto;  
     float: right;
-    margin-right: 70px;/* Görüntü ile içerik arasındaki boşluk */
+    margin-right: 70px;
 }
 @media only screen and (max-width: 1308px) {
     .cv-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem; 
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .cv-content .baslik{
         align-items: center;
         font-size: 20px;         
     }
     .cv-content img{
-        width: 200px; /* Görüntü genişliği */
+        width: 200px; 
     height: auto;
     }
 }
 @media only screen and (max-width: 960px) {
     .cv-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem; 
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .cv-content .baslik{
         align-items: center;
         font-size: 20px;         
     }
     .cv-content img{
-        width: 300px; /* Görüntü genişliği */
+        width: 300px; 
     height: auto;
     }
 }
@@ -382,9 +408,9 @@ padding:10 10px 100px 100;
 
 @media only screen and (max-width: 676px) {
     .cv-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 1.2rem; /* Yazı boyutunu daha da küçültme */
+        padding: 1rem; 
+        margin: 0.5rem 1%;
+        font-size: 1.2rem; 
     }
     .cv-content .baslik{
         align-items: center;
@@ -405,12 +431,12 @@ padding:10 10px 100px 100;
 .login-content {
     font-family: "Abril Fatface", serif;
     /* font-family: "Briem Hand", cursive; */
-    padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 10px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    margin: 2rem 5%; /* Kenar boşlukları */
-    font-size: 1.6rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    padding: 2rem; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 2rem 5%; 
+    font-size: 1.6rem;
+    color: #333; 
 }
 .login-content .baslik{
     font-family: "Abril Fatface", serif;
@@ -423,7 +449,7 @@ padding:10 10px 100px 100;
 #contact-form button {
     font-family: "Ubuntu Sans", sans-serif;
     display: block;
-    width: 20%;
+    width: 280px;
     margin-bottom: 10px;
     padding: 10px;   
     border: 1px solid #d0bdbd;
@@ -442,11 +468,11 @@ padding:10 10px 100px 100;
 }
 
 @media only screen and (max-width: 676px) {
-    .login-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 1.2rem; /* Yazı boyutunu daha da küçültme */
-    }
+    /* .login-content {
+        padding: 1rem;
+        margin: 0.5rem 1%; 
+        font-size: 1.2rem; 
+    } */
     .login-content .baslik{
         align-items: center;
         font-size: 70px;
@@ -520,6 +546,39 @@ padding:10 10px 100px 100;
     padding-left: 120px;
     padding-right: 100px;
 }
+.takim-content5 {
+    font-family: "Ubuntu Sans", sans-serif;
+    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
+    border-radius: 900px; /* Kenar yuvarlatma */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    margin: 1rem 1%; 
+    font-size: 2rem; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
+    background-color:#33d456f1;
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 100px;
+}
+
+    .takim-content5 img {
+        float: right;
+        margin-left: 20px;
+        max-width: 300px;
+        height: auto;
+    }
+    .takim-content4 img {
+        float: right;
+        margin-left: 20px;
+        max-width: 300px;
+        height: auto;
+    }
+    .takim-content3 img {
+        float: right;
+        margin-left: 20px;
+        max-width: 300px;
+        height: auto;
+    }
+
 .takim-content4 {
     font-family: "Ubuntu Sans", sans-serif;
     padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
@@ -529,18 +588,18 @@ padding:10 10px 100px 100;
     font-size: 2rem; /* Yazı boyutu */
     color: #333; /* Yazı rengi */
     background-color:#c7d433f1;
-    text-align: justify;
+    text-align: center;
     padding-left: 120px;
     padding-right: 100px;
 }
 .takim-content3 {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 900px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 10rem; 
+    border-radius: 900px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     margin: 1rem 1%; 
-    font-size: 2rem; /* Yazı boyutu */
-    color: #d0cdcd; /* Yazı rengi */
+    font-size: 2rem; 
+    color: #d0cdcd; 
     background-color:#090531f1;
     text-align: justify;
     padding-left: 120px;
@@ -551,7 +610,7 @@ padding:10 10px 100px 100;
     text-decoration:underline;   
     padding-left: 320px;
     align-items: center;
-    
+    /* text-align: center; */
     font-size: 60px;
     color: #083041;
 }
@@ -595,67 +654,99 @@ padding:10 10px 100px 100;
 
 @media only screen and (max-width: 1415px) {
     .takim-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem; 
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .takim-content .baslik{
-        align-items: center;
-        font-size: 40px;
-       padding-left: 330px;
-       padding-top: 40px;
+        text-align: center;
+        font-size: 58px;
+       padding-left: 50px;
+       /* padding-top: 40px; */
     
     }
 }
 @media only screen and (max-width: 1015px) {
     .takim-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem; 
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .takim-content .baslik{
         align-items: center;
+        margin: auto;
+     
         font-size: 40px;
-       padding-left: 200px;
+       /* padding-left: 200px; */
        padding-top: 50px;
     
     }
 }
 @media only screen and (max-width: 850px) {
     .takim-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 1.2rem; /* Yazı boyutunu daha da küçültme */
+        padding: 1rem; 
+        margin: 0.5rem 1%; 
+        font-size: 1.2rem; 
     }
     .takim-content .baslik{
         align-items: center;
         font-size: 29px;  
-        padding-left: 150px; 
+        padding-left: 7px; 
     }
     .takim-content2{
         margin: 15px;
         padding: 15px;
         border-radius: 15px;
     }
+    .takim-content3{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .takim-content4{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .takim-content5{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .takim-content5 img {
+        text-align: center;
+        height: auto;
+        padding-right: 55px;
+    }
+    .takim-content4 img {
+        text-align: center;
+        height: auto;
+        padding-right: 50px;
+    }
+    .takim-content3 img {
+        text-align: center;
+        height: auto;
+        padding-right: 50px;
+    }
 }
 @media only screen and (max-width: 650px) {
     .takim-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        margin: 0.5rem 1%; /* Kenar boşluklarını daha da azaltma */
-        font-size: 1.2rem; /* Yazı boyutunu daha da küçültme */
+        padding: 1rem; 
+        margin: 0.5rem 1%; 
+        font-size: 1.2rem; 
     }
     .takim-part {
         display: flex;
-        flex-wrap: wrap; /* Resimlerin alt alta dökülmesini sağlar */
-        justify-content: center; /* Resimleri ortalar */
+        flex-wrap: wrap; 
+        justify-content: center; 
         margin: 90px;
     }
     .takim-part img {
         border-radius: 50%;
-        width: 230px; /* Resimlerin boyutunu istediğiniz gibi ayarlayabilirsiniz */
-        height: 200px; /* Resimlerin boyutunu istediğiniz gibi ayarlayabilirsiniz */
+        width: 230px; 
+        height: 200px; 
         transition: all 0.5s ease;
-        margin: 10px; /* Resimler arasındaki boşluğu ayarlayabilirsiniz */
+        margin: 10px; 
     }
 
     .takim-part img:hover {
@@ -664,9 +755,24 @@ padding:10 10px 100px 100;
     .takim-content .baslik{
         align-items: center;
         font-size: 25px;  
-        padding-left: 80px; 
+        /* padding-left: 80px;  */
     }
     .takim-content2{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .takim-content3{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .takim-content4{
+        margin: 15px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .takim-content5{
         margin: 15px;
         padding: 15px;
         border-radius: 5px;
@@ -676,24 +782,23 @@ padding:10 10px 100px 100;
 
 @media only screen and (max-width: 450px) {
     .takim-content {
-        padding: 1rem; /* Daha küçük ekranlarda daha küçük içerik kutusu */
-        /* margin: 0.5rem 1%; Kenar boşluklarını daha da azaltma */
+        padding: 1rem;
         font-size: 1.2rem; 
-        margin:0/* Yazı boyutunu daha da küçültme */
+        margin:0
     }
     .takim-part {
         display: flex;
-        flex-wrap: wrap; /* Resimlerin alt alta dökülmesini sağlar */
-        justify-content: center; /* Resimleri ortalar */
+        flex-wrap: wrap; 
+        justify-content: center; 
         margin: 90px;
     }
 
     .takim-part img {
         border-radius: 50%;
-        width: 200px; /* Resimlerin boyutunu istediğiniz gibi ayarlayabilirsiniz */
-        height: 200px; /* Resimlerin boyutunu istediğiniz gibi ayarlayabilirsiniz */
+        width: 200px; 
+        height: 200px; 
         transition: all 0.5s ease;
-        margin: 10px; /* Resimler arasındaki boşluğu ayarlayabilirsiniz */
+        margin: 10px; 
     }
 
     .takim-part img:hover {
@@ -702,7 +807,7 @@ padding:10 10px 100px 100;
     .takim-content .baslik{
         align-items: center;
         font-size: 25px;  
-        padding-left: 40px; 
+        /* padding-left: 40px;  */
     }
 }
 @media (max-width: 1491px) {
@@ -736,7 +841,7 @@ padding:10 10px 100px 100;
     box-shadow: 0px 20px 14px 0px rgb(0 0 0/75%);
     border-radius: 5rem;
     right: 20%;
-    transform: translateX(0%); /* Navbar'ı sağa kaydırmak için */
+    transform: translateX(0%); 
     transition: transform 0.03s ease;
     display: none;
 
@@ -751,98 +856,91 @@ padding:10 10px 100px 100;
 }
 @media (min-width: 800px) {
     .header .navbar {
-        display: block; /* or whatever your original value was */
+        display: block; 
     }
 }
 .menu-btn {  
-    cursor: pointer; /* İmleci bir işaretçiye dönüştürür */
+    cursor: pointer;
 }
 
 .carousel {
-    width: 50%; /* Carousel'in genişliğini ayarlar */
-    margin: auto; /* Carousel'i sayfanın ortasına hizalar */
+    width: 80%; 
+    margin: auto;
    
   }
   .carousel-item img {
     width: 100%;
     height: auto; 
-    border-radius: 20px;/* Resimlerin oranını korur */
+    border-radius: 20px;
   }
-#pizza {
+
+#catImageContainer {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
     text-align: center;
 }
 
-#pizza img {
-    width: 300px;
-    height: 300px;
+#catImageContainer img {
+    width: 100%;
+    height: auto;
 }
 
-#pizza h2 {
-    font-size: 2rem;
+#catImageContainer h2 {
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+#characterContainer {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    text-align: center;
+}
+
+#characterContainer img {
+    width: 100%;
+    height: auto;
+}
+
+#characterContainer h2 {
+    padding: 10px;
+    font-size: 20px;
     color: #333;
 }
 
 
-/* #film {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#film p {
-    font-size: 1.2em;
-    color: #DFD0B8;
-    text-align: center;
-}
-
-#film img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
+#starWarsCharacterContainer {
+    width: 300px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-#movie-details {
-    width: 80%;
-    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-#movie-details h2 {
-    font-size: 2em;
-    color: #DFD0B8;
-}
-#movie-details p #film img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-#movie-details p {
-    font-size: 1.2em;
-    color: #DFD0B8;
     text-align: center;
 }
-h1  {
-    color: #DFD0B8;
-    text-align: center;
-    animation: 1s ease-out 0s 1 slideInFromTop;
+
+#starWarsCharacterContainer img {
+    width: 100%;
+    height: auto;
 }
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-} */
+#starWarsCharacterContainer h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#starWarsCharacterContainer p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+

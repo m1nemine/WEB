@@ -1,28 +1,10 @@
 // script.js
 var mainimg=document.querySelector('#slayt')
-var images=['images/gorsel1.jpg','images/gorsel2.jpg','images/gorsel3.jpg','images/gorsel4.jpg']
+var images=['images/slider1.jpg','images/slider3.jpg','images/slider2.jpg','images/slider4.jpg']
 var num=0;
 const auto=true;
 const IntervalTime=5000;
 let slideInterval
-
-// function next() {
-//   num++;
-//   if(num >= images.length) {
-//       num = 0;
-//   }
-//   mainimg.src = images[num];
-//   mainimg.parentNode.href = links[num]; // Linki güncelle
-// }
-
-// function back() {
-//   num--;
-//   if(num < 0) {
-//       num = images.length - 1;
-//   }
-//   mainimg.src = images[num];
-//   mainimg.parentNode.href = links[num]; // Linki güncelle
-// }
 
 function next(){
   num++
@@ -115,60 +97,87 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// fetch('https://api.ibb.gov.tr/iett/UlasimAnaVeri/HatDurakGuzergah.asmx?wsdl')
-//   .then(response => response.text())
-//   .then(data => {
-//     // Veriyi işleyebilirsiniz
-//     document.getElementById('veriGoster').innerHTML = data; // Veriyi HTML'e ekleyebilirsiniz
-//   })
-//   .catch(error => {
-//     console.error('Hata oluştu:', error);
-//   });
-//   const url = 'https://pizza-and-desserts.p.rapidapi.com/pizzas';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'fbe8344401mshac1e70a23f2cffap16ce7bjsn9d4ba5772fce',
-// 		'X-RapidAPI-Host': 'pizza-and-desserts.p.rapidapi.com'
-// 	}
-// };
 
-// try {
-// 	const response = await fetch(url, options);
-// 	const result = await response.text();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
 
-async function fetchPizza() {
-  const url = 'https://pizza-and-desserts.p.rapidapi.com/pizzas';
-  const options = {
-      method: 'GET',
-      headers: {
-          'X-RapidAPI-Key': 'fbe8344401mshac1e70a23f2cffap16ce7bjsn9d4ba5772fce',
-          'X-RapidAPI-Host': 'pizza-and-desserts.p.rapidapi.com'
-      }
-  };
 
+
+
+async function fetchRandomCatImage() {
+  const url = 'https://api.thecatapi.com/v1/images/search';
   try {
-      const response = await fetch(url, options);
+      const response = await fetch(url);
       const data = await response.json();
-      const randomPizza = data[Math.floor(Math.random() * data.length)];
-      const pizzaHtml = `
-          <div class="pizza">
-              <img src="${randomPizza.image}" alt="${randomPizza.name}">
-              <h2>${randomPizza.name}</h2>
-          </div>
-      `;
-      document.getElementById('pizzaContainer').innerHTML = pizzaHtml;
+      const catImage = data[0].url;
+      return catImage;
   } catch (error) {
       console.error(error);
   }
 }
 
-fetchPizza();
+fetchRandomCatImage().then(catImage => {
+  document.getElementById('catImageContainer').innerHTML = `<img src="${catImage}" alt="Random Cat"><h2>her türlü kedi görseli</h2>`;
+});
 
+
+
+async function fetchRandomCharacter() {
+  const url = 'https://rickandmortyapi.com/api/character';
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const randomIndex = Math.floor(Math.random() * data.results.length);
+      const character = data.results[randomIndex];
+      return {
+          name: character.name,
+          image: character.image
+      };
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+fetchRandomCharacter().then(character => {
+  document.getElementById('characterContainer').innerHTML = `<img src="${character.image}" alt="${character.name}"><h2>Rick and Morty karakterleri</h2><h2>${character.name}</h2>`;
+});
+
+
+
+
+async function fetchRandomStarWarsCharacter() {
+  const url = 'https://swapi.dev/api/people/';
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const randomIndex = Math.floor(Math.random() * data.results.length);
+      const character = data.results[randomIndex];
+      const characterId = character.url.match(/\/([0-9]*)\/$/)[1];
+      return {
+          name: character.name,
+          image: `https://starwars-visualguide.com/assets/img/characters/${characterId}.jpg`
+      };
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+fetchRandomStarWarsCharacter().then(character => {
+  document.getElementById('starWarsCharacterContainer').innerHTML = `<img src="${character.image}" alt="${character.name}"><h2>Star Wars karakterleri</h2><h2>${character.name}</h2>`;
+});
+async function fetchRandomHarryPotterCharacter() {
+  const url = 'http://hp-api.herokuapp.com/api/characters';
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const randomIndex = Math.floor(Math.random() * data.length);
+      const character = data[randomIndex];
+      return {
+          name: character.name,
+          image: character.image
+      };
+  } catch (error) {
+      console.error(error);
+  }
+}
 
 // new Vue({
 //   el: '#contactForm',
