@@ -37,47 +37,47 @@
 <div class="iletisim-content" >
 
     <div id="app">
-   <form   action="iletisim.php" name="Form" onsubmit="return control(this)"  @submit.prevent="checkForm" method="POST">
+   <form   action="iletisim.php" name="Form" onsubmit="return control(this)"  @submit="checkForm" method="POST">
 
     <div class="form-group">
         <label for="name">İsim ve Soyisim</label>
-        <input type="text" name="isim" class="form-control" placeholder="İsminizi ve Soyisminizi Girin">
-        
+        <input type="text" name="isim" v-model="isim" class="form-control" placeholder="İsminizi ve Soyisminizi Girin">
+        <small class="form-text text-muted">Zorunlu alan</small>
         
     </div>
 
     <div class="form-group">
         <br>
         <label for="email">Email</label>
-        <input type="text" name="mail" class="form-control" placeholder="Emailinizi girin.">
-       
+        <input type="text" name="mail" v-model="mail" class="form-control" placeholder="Emailinizi girin.">
+        <small class="form-text text-muted">Zorunlu alan</small>
         
 
     </div>
     
     <div class="form-group">
         <label for="range">TC kimlik NO:</label>
-        <input type="range" id="range" name="range" min="10000000000" max="99999999999" class="form-control" oninput="updateValue(this.value)">
+        <input type="range" id="range" name="range" v-model="range" min="10000000000" max="99999999999" class="form-control" oninput="updateValue(this.value)">
         <span id="rangeValue"></span>
     </div>
     
       
     <div class="form-group">
         <label for="date">Doğum Tarihi:</label>
-        <input type="date" id="date" name="date" class="form-control">
+        <input type="date" id="date" name="date" v-model="date" class="form-control">
     </div>
 
     <div class="form-group">
         <br>
         <label for="radio2">Cinsiyetinizi Seçiniz</label><br>
-        <input type="radio" name="radio2" value="Erkek">Erkek<br>
-        <input type="radio" name="radio2" value="Kadın">Kadın <br>
+        <input type="radio" name="radio2" v-model="radio2" value="Erkek">Erkek<br>
+        <input type="radio" name="radio2" v-model="radio2" value="Kadın">Kadın <br>
     </div>
     <br>
   
   <div class="form-group">
       <label for="option">Ülke:</label>
-      <select id="option" name="option" class="form-control">
+      <select id="option" name="option" v-model="option" class="form-control">
           <option value="option1">Türkiye</option>
           <option value="option2">ABD</option>
           <option value="option3">Almanya</option>
@@ -92,7 +92,7 @@
 
     <div class="form-group">
         <label for="message">Mesaj</label>
-        <textarea name="mesaj" rows="5" class="form-control"></textarea>
+        <textarea name="mesaj" v-model="mesaj" rows="5" class="form-control"></textarea>
     </div>
     <br>
     <button class="btn btn-info" type="reset" id="submit" name="submit" value="Reset"
@@ -100,7 +100,7 @@
 
     <button class="btn btn btn-info" type="submit" name="gonder" id="sub">Gönder</button>
 
-    <button class="btn btn btn btn-info"  type="submit" name="checkForm"  @click="checkForm">Framework Gönder</button>
+    <button class="btn btn btn btn-info"  type="button" name="checkForm"  @click="checkForm">Framework Gönder</button>
 
     <br><br><br>
 
@@ -108,7 +108,7 @@
  </div> </div>
  
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/script.js"></script><script src="scripts/iletisim.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
     function control(form) {
         var isim = form.isim.value;
@@ -134,42 +134,10 @@
     document.getElementById('rangeValue').innerText = val;
 }
 
-
-var app = new Vue({
-    el: '#app',
-    data: {
-      isim: '',
-      mail: '',
-      radio2: '',
-      date: '',
-      mailFormat: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-      rangeValue: ''
-    },
-    methods: {
-      updateValue: function(val) {
-        this.rangeValue = val;
-      },
-      checkForm: function() {
-        if (this.isim == "" || this.mail == "" || this.radio2 == "" || this.date == "") {
-          alert("Lütfen tüm alanları doldurunuz.vue");
-          return false;
-        }
-  
-        if (!this.mail.match(this.mailFormat)) {
-          alert("Lütfen geçerli bir e-mail adresi giriniz.vue");
-          return false;
-        }
-  
-        window.location.href = 'iletisim.php';
-      }
-    }
-  });
-
-
-      
     </script>
 
 
-  
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </body>
 </html>
+<script src="scripts/iletisim.js"></script>
