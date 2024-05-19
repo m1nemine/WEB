@@ -35,13 +35,14 @@
   </header>
 
 <div class="iletisim-content" >
+
     <div id="app">
-  <form   action="iletisim.php" name="Form" onsubmit="return control(this)" method="POST">
+   <form   action="iletisim.php" name="Form" onsubmit="return control(this)"  @submit.prevent="checkForm" method="POST">
 
     <div class="form-group">
         <label for="name">İsim ve Soyisim</label>
         <input type="text" name="isim" class="form-control" placeholder="İsminizi ve Soyisminizi Girin">
-        <small class="form-text text-muted">Zorunlu alan</small>
+        
         
     </div>
 
@@ -49,11 +50,10 @@
         <br>
         <label for="email">Email</label>
         <input type="text" name="mail" class="form-control" placeholder="Emailinizi girin.">
-        <small class="form-text text-muted">Zorunlu alan</small>
+       
         
 
     </div>
-
     
     <div class="form-group">
         <label for="range">TC kimlik NO:</label>
@@ -66,15 +66,7 @@
         <label for="date">Doğum Tarihi:</label>
         <input type="date" id="date" name="date" class="form-control">
     </div>
-    
 
-    <div class="form-group">
-        <br>
-        <label for="radio">İşleminizi Seçiniz</label><br>
-        <input type="radio" name="radio" value="Sikayet">Şikayet<br>
-        <input type="radio" name="radio" value="Oneri">Öneri <br>
-        <input type="radio" name="radio" value="Diger">Diğer
-    </div>
     <div class="form-group">
         <br>
         <label for="radio2">Cinsiyetinizi Seçiniz</label><br>
@@ -93,7 +85,7 @@
   </div>
   
   <div class="form-group">
-      <label for="checkbox">Ticari mail almak istiyor musunuz:</label>
+      <label for="checkbox">Ticari mail almayı kabul ediyor musunuz:</label>
       <input type="checkbox" id="checkbox" name="checkbox" class="form-control">
   </div>
   
@@ -108,42 +100,24 @@
 
     <button class="btn btn btn-info" type="submit" name="gonder" id="sub">Gönder</button>
 
-    <button class="btn btn-info"  type="button" @click="checkForm">Framework Gönder</button>
+    <button class="btn btn btn btn-info"  type="submit" name="checkForm"  @click="checkForm">Framework Gönder</button>
 
     <br><br><br>
 
-</form> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br>
-
-<div v-if="errors.form" class="alert alert-danger">
-    {{ errors.form }}
-  </div>
-  <div v-if="errors.mail" class="alert alert-danger">
-    {{ errors.mail }}
-  </div>
-  
-  <br><br><br> 
-  <br><br><br> 
-  <br><br><br> 
-  <br><br><br> 
-  <br><br><br>
-
-
-</div>
-</div>
- </div>
+</form> 
+ </div> </div>
+ 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/script.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   <!-- Vue.js script -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="scripts/script.js"></script><script src="scripts/iletisim.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
     function control(form) {
         var isim = form.isim.value;
         var mail = form.mail.value;
-        var radio = form.radio.value;
         var radio2 = form.radio2.value;
         var date = form.date.value;
+        var range = form.range.value;
     
-        if (isim == "" || mail == "" || radio == "" || radio2 == "" || date == "") {
+        if (isim == "" || mail == "" || radio2 == "" || date == "" || range == "") {
             alert("Lütfen tüm alanları doldurunuz.");
             return false;
         }
@@ -161,66 +135,37 @@
 }
 
 
-new Vue({
-      el: '#app',
-      data: {
-        form: {
-          isim: '',
-          mail: '',
-          radio: '',
-          radio2: '',
-          date: '',
-          range: '',
-          option: '',
-          checkbox: false,
-          mesaj: ''
-        },
-        errors: {}
+var app = new Vue({
+    el: '#app',
+    data: {
+      isim: '',
+      mail: '',
+      radio2: '',
+      date: '',
+      mailFormat: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+      rangeValue: ''
+    },
+    methods: {
+      updateValue: function(val) {
+        this.rangeValue = val;
       },
-      methods: {
-        control() {
-          this.errors = {};
-          if (!this.form.isim || !this.form.mail || !this.form.radio || !this.form.radio2 || !this.form.date) {
-            this.errors.form = 'Lütfen tüm alanları doldurunuz.';
-            return false;
-          }
-          var mailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-          if (!this.form.mail.match(mailFormat)) {
-            this.errors.mail = 'Lütfen geçerli bir e-mail adresi giriniz.';
-            return false;
-          }
-          // Form geçerliyse yönlendirme yap
-          window.location.href = 'iletisim.php';
-          return true;
-        },
-        updateValue(val) {
-          this.form.range = val;
-        },
-        resetForm() {
-          this.form = {
-            isim: '',
-            mail: '',
-            radio: '',
-            radio2: '',
-            date: '',
-            range: '',
-            option: '',
-            checkbox: false,
-            mesaj: ''
-          };
-          this.errors = {};
-        },
-        checkForm() {
-          if (this.control()) {
-            alert("Framework Gönder butonuna basıldı, form geçerli.");
-          }
+      checkForm: function() {
+        if (this.isim == "" || this.mail == "" || this.radio2 == "" || this.date == "") {
+          alert("Lütfen tüm alanları doldurunuz.vue");
+          return false;
         }
+  
+        if (!this.mail.match(this.mailFormat)) {
+          alert("Lütfen geçerli bir e-mail adresi giriniz.vue");
+          return false;
+        }
+  
+        window.location.href = 'iletisim.php';
       }
-    });
-      
+    }
+  });
 
 
-    
       
     </script>
 

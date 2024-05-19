@@ -1,21 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   
-    $expected_email = "example@example.com";
-    $expected_password = "123456";
-
-    // Formdan gelen verileri al
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    // E-posta ve şifre alanlarının dolu olduğunu ve beklenen değerlerle eşleştiğini kontrol et
-   // if (!empty($email) && !empty($password) && $email == $expected_email && $password == $expected_password) {
-   //     echo "Hoşgeldin G231210374!";
-    //} else {
-      //  echo "Bulunamadı. Lütfen geçerli bir e-posta ve şifre girin.";
-    //}
-}
-?>
 
 <?php
 header("refresh:5;url=index.html");
@@ -25,63 +7,36 @@ header("refresh:5;url=index.html");
 <head>
     <title>Login</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Freeman&family=IM+Fell+English+SC&family=Jaro:opsz@6..72&family=Limelight&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wdth,wght@0,83.1,482;1,83.1,482&display=swap');
         body {
-            background-color: #f0f0f0;
+            background-color:  #675869f1;
         }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-group button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         .message {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f2f2f2;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            font-family: "Jaro", sans-serif;
+            font-size:55px;
+            text-align: center;
+            margin-top: 210px;
+            color:#e4e2b8f1;            
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $expected_email = "example@example.com";
+            $expected_email = "emine.boluk@ogr.sakarya.edu.tr";
             $expected_password = "123456";
             $email = $_POST["email"];
             $password = $_POST["password"];
             if (!empty($email) && !empty($password) && $email == $expected_email && $password == $expected_password) {
-                echo '<div class="message">Hoşgeldin G231210374!</div>';
+                echo '<div class="message">Hoşgeldiniz G231210374!</div>';
             } else {
                 echo '<div class="message">Bulunamadı. Lütfen geçerli bir e-posta ve şifre girin.</div>';
             }
         }
         ?>
-    </div>
+
 </body>
 </html>

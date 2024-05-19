@@ -3,7 +3,7 @@ var mainimg=document.querySelector('#slayt')
 var images=['images/slider1.jpg','images/slider3.jpg','images/slider2.jpg','images/slider4.jpg']
 var num=0;
 const auto=true;
-const IntervalTime=5000;
+const IntervalTime=8000;
 let slideInterval
 
 function next(){
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   images.forEach(function(img, index) {
       img.addEventListener('click', function() {
-          var targetElementId = 'resim' + (index + 1); // Her fotoğraf için farklı id oluşturuluyor
+          var targetElementId = 'resim' + (index + 1); 
           var targetElement = document.getElementById(targetElementId);
           if (targetElement) {
               targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -96,10 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
-
-
-
-
 
 
 async function fetchRandomCatImage() {
@@ -140,9 +136,6 @@ fetchRandomCharacter().then(character => {
   document.getElementById('characterContainer').innerHTML = `<img src="${character.image}" alt="${character.name}"><h2>Rick and Morty karakterleri</h2><h2>${character.name}</h2>`;
 });
 
-
-
-
 async function fetchRandomStarWarsCharacter() {
   const url = 'https://swapi.dev/api/people/';
   try {
@@ -163,49 +156,62 @@ async function fetchRandomStarWarsCharacter() {
 fetchRandomStarWarsCharacter().then(character => {
   document.getElementById('starWarsCharacterContainer').innerHTML = `<img src="${character.image}" alt="${character.name}"><h2>Star Wars karakterleri</h2><h2>${character.name}</h2>`;
 });
-async function fetchRandomHarryPotterCharacter() {
-  const url = 'http://hp-api.herokuapp.com/api/characters';
-  try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const randomIndex = Math.floor(Math.random() * data.length);
-      const character = data[randomIndex];
-      return {
-          name: character.name,
-          image: character.image
-      };
-  } catch (error) {
-      console.error(error);
+
+
+function control(form) {
+  var isim = form.isim.value;
+  var mail = form.mail.value;
+  var radio = form.radio.value;
+  var radio2 = form.radio2.value;
+  var date = form.date.value;
+
+  if (isim == "" || mail == "" || radio == "" || radio2 == "" || date == "") {
+      alert("Lütfen tüm alanları doldurunuz.j");
+      return false;
   }
+
+  var mailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!mail.match(mailFormat)) {
+      alert("Lütfen geçerli bir e-mail adresi giriniz.j");
+      return false;
+  }
+
+  return true;
+}
+function updateValue(val) {
+document.getElementById('rangeValue').innerText = val;
 }
 
-// new Vue({
-//   el: '#contactForm',
-//   methods: {
-//     validateFormVue: function () {
-//       var name = document.getElementById('name').value;
-//       var email = document.getElementById('email').value;
-//       var subject = document.getElementById('subject').value;
-//       var message = document.getElementById('message').value;
-//       var contact = document.querySelector('input[name="contact"]:checked').value;
-//       var subscribe = document.getElementById('subscribe').checked;
-//       var country = document.getElementById('country').value;
-//       var meetingTime = document.getElementById('meeting-time').value;
+var app = new Vue({
+  el: '#app',
+  data: {
+    isim: '',
+    mail: '',
+    radio2: '',
+    date: '',
+    mailFormat: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+    rangeValue: ''
+  },
+  methods: {
+    updateValue: function(val) {
+      this.rangeValue = val;
+    },
+    checkForm: function() {
+      if (this.isim == "" || this.mail == "" || this.radio2 == "" || this.date == "") {
+        alert("Lütfen tüm alanları doldurunuz.vue");
+        return false;
+      }
 
-//       if (!name || !email || !subject || !message || !contact || !country || !meetingTime) {
-//         alert('Lütfen tüm alanları doldurunuz.');
-//         return false;
-//       }
+      if (!this.mail.match(this.mailFormat)) {
+        alert("Lütfen geçerli bir e-mail adresi giriniz.vue");
+        return false;
+      }
 
-//       var re = /\S+@\S+\.\S+/;
-//       if(!re.test(email)) {
-//         alert('Lütfen geçerli bir e-posta adresi giriniz.');
-//         return false;
-//       }
+      window.location.href = 'iletisim.php';
+    }
+  }
+});
 
-//       alert('Form başarıyla gönderildi.');
-//       return true;
-//     }
-//   }
-// })
+
+
 

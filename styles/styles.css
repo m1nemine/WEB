@@ -155,31 +155,6 @@ body.takim-page {
     padding-left: 40px;
     padding-right: 40px;
 }
-
-/* @media only screen and (max-width: 1098px) {
-    .sehrim-content {
-        padding: 1.5rem; 
-        margin: 1rem 2%; 
-        font-size: 1.4rem; 
-    }
-    .sehrim-content .baslik{
-        align-items: center;
-        font-size: 50px;  
-    }
-} */
-
-/* @media only screen and (max-width: 676px) {
-    .sehrim-content {
-        padding: 1rem; 
-        margin: 0.5rem 1%; 
-        font-size: 1.2rem; 
-    }
-    .sehrim-content .baslik{
-        align-items: center;
-        font-size: 30px;   
-    }
-} */
-
 .main{
     width: 100%;
     height: auto;
@@ -221,9 +196,6 @@ padding: 10px;
     cursor: pointer;
     color:#c5bfbf
  }
-
-
-
 @media screen and (max-width: 768px) {
     .slider img {
         width: 20%; 
@@ -231,13 +203,12 @@ padding: 10px;
 }
 .index-content {
     font-family: "Almendra", sans-serif;
-    /* font-family: "Abril Fatface", sans-serif; */
-    padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 10px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    margin: 2rem 5%; /* Kenar boşlukları */
-    font-size: 1.6rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 2rem 5%; 
+    font-size: 1.6rem; 
+    color: #333; 
 }
 .index-content .baslik{
     font-family: "Almendra", sans-serif;
@@ -248,33 +219,41 @@ padding: 10px;
     float:left;
 padding:10 10px 100px 100;
 }
-
 .index-content .baslik .alt-baslik{
-
     font-size: 16px;
-
 }
 .index-content .index-metin{
-
     font-size: 25px;
     text-align: justify;
     padding-left: 40px;
-    padding-right: 40px;
- 
+    padding-right: 40px; 
 }
 .index-content .index-metin a{
     color: #000000;
 }
- 
-.ilgi-alani {
-    font-size: 30px;
+.ilgi-part {
+    display: flex;    
+    margin: 90px;
+    width:80% ;
+    justify-content: space-between;
+    margin-left: 0;
 }
-
+.ilgi-part img {   
+    border-radius: 50%;
+    width: 380px;
+    transition: all 0.5s ease;
+}
+.ilgi-part img:hover {
+    transform: scale(1.1); }
+.ilgi-part .image-container {
+    width: 10%;
+}
+  
 @media only screen and (max-width: 1098px) {
     .index-content {
-        padding: 1.5rem; /* Küçük ekranlarda daha küçük içerik kutusu */
-        margin: 1rem 2%; /* Kenar boşluklarını azaltma */
-        font-size: 1.4rem; /* Yazı boyutunu küçültme */
+        padding: 1.5rem;
+        margin: 1rem 2%; 
+        font-size: 1.4rem; 
     }
     .index-content .baslik{
         align-items: center;
@@ -285,6 +264,22 @@ padding:10 10px 100px 100;
         height: 400px;
         position: relative;
     
+    }
+    .ilgi-part {
+        display: flex;
+        flex-wrap: wrap;       
+        margin: 0;
+    }
+    .ilgi-part img {
+        border-radius: 50%;
+        width: 230px; 
+        height: 200px; 
+        transition: all 0.5s ease;
+        margin: 10px; 
+    }
+
+    .ilgi-part img:hover {
+        transform: scale(1.1);
     }
 }
 
@@ -298,18 +293,6 @@ padding:10 10px 100px 100;
         align-items: center;
         font-size: 25px;    
     }
-    /* .slider{
-        width: 100%; 
-        height: 170px;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-    .slider img {
-        width: 100%; 
-        height: 100%; 
-        border-radius: 7px; 
-    } */
 .slider{
     width: 200px;
     height: 300px;
@@ -320,6 +303,22 @@ padding:10 10px 100px 100;
     width: 100%; 
         height: 100%; 
         border-radius: 7px; 
+}
+.ilgi-part {
+    display:list-item;
+    flex-wrap: wrap;       
+    margin-left: 90px;
+}
+.ilgi-part img {
+    border-radius: 50%;
+    width: 230px; 
+    height: 200px; 
+    transition: all 0.5s ease;
+    margin: 10px; 
+}
+
+.ilgi-part img:hover {
+    transform: scale(1.1);
 }
 }
 
@@ -430,7 +429,6 @@ padding:10 10px 100px 100;
 
 .login-content {
     font-family: "Abril Fatface", serif;
-    /* font-family: "Briem Hand", cursive; */
     padding: 2rem; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -468,11 +466,6 @@ padding:10 10px 100px 100;
 }
 
 @media only screen and (max-width: 676px) {
-    /* .login-content {
-        padding: 1rem;
-        margin: 0.5rem 1%; 
-        font-size: 1.2rem; 
-    } */
     .login-content .baslik{
         align-items: center;
         font-size: 70px;
@@ -480,7 +473,7 @@ padding:10 10px 100px 100;
     
     }
 }
-/* Style the form */
+
 .iletisim-content form {
     font-family: "Ubuntu Sans", sans-serif;
     width: 100%;
@@ -492,19 +485,13 @@ padding:10 10px 100px 100;
     border-radius: 5px;
     font-size: 20px;
 }
-
-/* Style the form groups */
 .iletisim-content .form-group {
     margin-bottom: 20px;
 }
-
-/* Style the labels */
 .iletisim-content label {
     display: block;
     margin-bottom: 5px;
 }
-
-/* Style the input fields */
 .iletisim-content input[type="text"],
 .iletisim-content input[type="email"] {
     width: 100%;
@@ -512,35 +499,40 @@ padding:10 10px 100px 100;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
-/* Style the radio button */
 .iletisim-content input[type="radio"] {
     margin-right: 5px;
 }
 
-/* Style the small text */
+.iletisim-content button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .iletisim-content .form-text {
     font-size: 0.8em;
     color: #888;
 }
 .takim-content {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 2rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 500px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    margin: 2rem 5%; /* Kenar boşlukları */
-    font-size: 1.6rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    padding: 2rem;  
+    border-radius: 500px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 2rem 5%; 
+    font-size: 1.6rem; 
+    color: #333; 
     background-color:#c7d433f1
 }
 .takim-content2 {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 900px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 10rem; 
+    border-radius: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1rem 1%; 
-    font-size: 2rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    font-size: 2rem;
+    color: #333;
     background-color:#33d456f1;
     text-align: justify;
     padding-left: 120px;
@@ -548,12 +540,12 @@ padding:10 10px 100px 100;
 }
 .takim-content5 {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 900px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 10rem;
+    border-radius: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1rem 1%; 
-    font-size: 2rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    font-size: 2rem;
+    color: #333;
     background-color:#33d456f1;
     text-align: center;
     padding-left: 120px;
@@ -581,12 +573,12 @@ padding:10 10px 100px 100;
 
 .takim-content4 {
     font-family: "Ubuntu Sans", sans-serif;
-    padding: 10rem; /* Örnek bir iç içeriğe özel bir stil */  
-    border-radius: 900px; /* Kenar yuvarlatma */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 10rem; 
+    border-radius: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 1rem 1%; 
-    font-size: 2rem; /* Yazı boyutu */
-    color: #333; /* Yazı rengi */
+    font-size: 2rem; 
+    color: #333; 
     background-color:#c7d433f1;
     text-align: center;
     padding-left: 120px;
@@ -610,14 +602,12 @@ padding:10 10px 100px 100;
     text-decoration:underline;   
     padding-left: 320px;
     align-items: center;
-    /* text-align: center; */
     font-size: 60px;
     color: #083041;
 }
 .takim-part {
     display: flex;    
     margin: 90px;
-    /* padding-left: 30px; */
     width:auto ;
 }
 .takim-part img {   
@@ -650,8 +640,6 @@ padding:10 10px 100px 100;
     opacity: 1;
 }
 
-
-
 @media only screen and (max-width: 1415px) {
     .takim-content {
         padding: 1.5rem; 
@@ -661,9 +649,7 @@ padding:10 10px 100px 100;
     .takim-content .baslik{
         text-align: center;
         font-size: 58px;
-       padding-left: 50px;
-       /* padding-top: 40px; */
-    
+       padding-left: 50px;   
     }
 }
 @media only screen and (max-width: 1015px) {
@@ -674,12 +660,9 @@ padding:10 10px 100px 100;
     }
     .takim-content .baslik{
         align-items: center;
-        margin: auto;
-     
+        margin: auto; 
         font-size: 40px;
-       /* padding-left: 200px; */
-       padding-top: 50px;
-    
+       padding-top: 50px;   
     }
 }
 @media only screen and (max-width: 850px) {
@@ -755,7 +738,6 @@ padding:10 10px 100px 100;
     .takim-content .baslik{
         align-items: center;
         font-size: 25px;  
-        /* padding-left: 80px;  */
     }
     .takim-content2{
         margin: 15px;
@@ -776,10 +758,8 @@ padding:10 10px 100px 100;
         margin: 15px;
         padding: 15px;
         border-radius: 5px;
-    }
-       
+    }      
 }       
-
 @media only screen and (max-width: 450px) {
     .takim-content {
         padding: 1rem;
@@ -807,7 +787,6 @@ padding:10 10px 100px 100;
     .takim-content .baslik{
         align-items: center;
         font-size: 25px;  
-        /* padding-left: 40px;  */
     }
 }
 @media (max-width: 1491px) {
@@ -822,29 +801,22 @@ padding:10 10px 100px 100;
         margin:3.5rem;
     }
 }
-/* @media (max-width: 699px) {
-    #menu-btn{
-        display: inline-block;
-        margin-left: 50px;
-    }} */
 @media (max-width: 799px) {
 #menu-btn{
     display: inline-block;
-    /* margin-left: 200px; */
 }
 .header .navbar{
     position: absolute;
     top: 95%;
     background-color: #c0c0c0;
     height: calc(100vh-9rem);
-    width :30rem;
+    width :50rem;
     box-shadow: 0px 20px 14px 0px rgb(0 0 0/75%);
     border-radius: 5rem;
     right: 20%;
     transform: translateX(0%); 
     transition: transform 0.03s ease;
     display: none;
-
 }
 .header .navbar a{
     color:var(--black-color);
@@ -853,10 +825,19 @@ padding:10 10px 100px 100;
     padding:0.5 rem;
     font-size: 2 rem;
 }
+@media(max-width: 510px){
+    .header .navbar{
+        width: 30rem;
+        
+    }
 }
+
+}
+
 @media (min-width: 800px) {
     .header .navbar {
         display: block; 
+      
     }
 }
 .menu-btn {  
@@ -915,8 +896,6 @@ padding:10 10px 100px 100;
     font-size: 20px;
     color: #333;
 }
-
-
 #starWarsCharacterContainer {
     width: 300px;
     border: 1px solid #ddd;
